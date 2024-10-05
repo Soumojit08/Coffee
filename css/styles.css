@@ -1,0 +1,175 @@
+/* Reset some default browser styling */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+:root {
+  --background: #111315;
+  --card: #1b1d1f;
+  --primary: #6f757c;
+  --badge: #bee3cc;
+  --text: #fef7ee;
+  --img-badge: #f6c768;
+  --accent-text: #ed735d;
+}
+
+/* Body styling */
+body {
+  height: 100%;
+  width: 100%;
+  background: var(--background);
+  font-size: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--background);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--card);
+  border: 1px solid #555555;
+}
+
+main {
+  position: relative;
+}
+
+header {
+  opacity: 0;
+  background: url(../images/bg-cafe.jpg);
+  background-position: center;
+  height: 200px;
+  z-index: 1;
+  position: relative;
+  background-size: cover;
+}
+
+.box {
+  opacity: 0;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%) !important;
+  width: 60vw;
+  background: var(--card);
+  z-index: 10;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#svg {
+  position: absolute;
+  left: 65%;
+  z-index: 11;
+}
+
+#texts {
+  margin-top: 20px;
+  z-index: 12;
+  width: 50%;
+  text-align: center;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#texts h1 {
+  font-size: 2rem;
+  color: var(--text);
+}
+
+#texts p {
+  color: var(--primary);
+}
+
+#btn1 {
+  color: var(--text);
+  padding: 10px 15px;
+  cursor: pointer;
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+}
+
+#btn1:active {
+  transform: scale(0.98);
+}
+
+#btn2 {
+  color: var(--text);
+  padding: 10px 15px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+}
+
+#card-container {
+  width: 100%;
+  margin-top: 30px;
+  gap: 8px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  border-radius: 16px;
+  height: 240px;
+  width: 30%;
+  padding: 5px;
+  overflow: hidden;
+  color: var(--text);
+  opacity: 0;
+}
+
+.img {
+  width: 100%; /* Full width of the card */
+  height: 70px;
+  border-radius: 8px; /* Optional: round corners */
+  margin-bottom: 5px; /* Space between image and text */
+  background-size: cover;
+}
+
+.item-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card h2 {
+  font-size: 1rem;
+}
+
+.price {
+  background: var(--badge);
+  color: #111;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  padding: 5px;
+}
+
+.ratting {
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+  gap: 2px;
+}
+
+#sold {
+  margin-right: 72px;
+  color: var(--accent-text);
+}
